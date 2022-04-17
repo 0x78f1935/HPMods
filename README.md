@@ -27,3 +27,9 @@ Mods which you would like to install should be copied into the `Steam\steamapps\
 
 ![Master Compare](ItemRandomizer/docs/assets/compare_1.png "Compare 1")
 ![Fridge Compare](ItemRandomizer/docs/assets/compare_2.png "Compare 2")
+
+## [HPFreecam](https://github.com/CamelCaseName/HPFreecam/tree/master)
+> HPFreecam gives you the ability to break the in game camera bounderies
+
+![BounderyBreak](https://user-images.githubusercontent.com/48067449/163736555-1b04a25b-4682-440a-8182-cb1964ae4f51.png "Game Camere Boundery break")
+![BounderyBreakMenu](https://user-images.githubusercontent.com/48067449/163736511-a13cad20-1213-4a7e-8c57-a289b1f9e7ca.png "Menu Camera Boundery Break")
