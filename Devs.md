@@ -94,7 +94,7 @@ Add the additional `Reference`'s to your project:
 - `MelonLoader\Managed\UnhollowerBaseLib.dll`
     > If `MelonLoader\Managed\UnhollowerBaseLib.dll` is missing, use `Il2CppAssemblyUnhollower` instead downloaded earlier in this document.
 
-For a clean build you would like to select all the references in your project.
+For a clean build you would like to select all the references in your project. \
 ![ReferenceSelection](.github/docs//assets/reference_selection.png "Reference Selection")
 
 After which you would like to turn `Copy Local` inside the `Properties` window to `False`.
