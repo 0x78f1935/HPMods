@@ -18,6 +18,8 @@ After this the installation directory of the game should contain a new folder ca
 Mods which you would like to install should be copied into the `Steam\steamapps\common\House Party\Mods` folder.
 > For example `Steam\steamapps\common\House Party\Mods\ItemRandomizer.dll`.
 
+### [Are you a developer? Click here.](Devs.md)
+
 # Mods
 
 ## ItemRandomizer
