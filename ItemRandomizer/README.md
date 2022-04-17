@@ -6,6 +6,9 @@ This mods randomizes the location of interactable items when starting a new game
 
 > Items clipped through a wall will get a texture which is visable through walls.
 
+![Occulission 1](docs/assets/occulission_1.png "Occulission 1")
+![Occulission 2](docs/assets/occulission_2.png "Occulission 2")
+
 
 # Keybindings
 

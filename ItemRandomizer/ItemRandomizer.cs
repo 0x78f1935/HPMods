@@ -2,6 +2,7 @@
 using System.Linq;
 using MelonLoader;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 using EekCharacterEngine.Interaction;
@@ -18,7 +19,7 @@ namespace ItemRandomizer
         public static bool sceneInLoading = false;
         public static bool sceneInGameMain = false;
 
-        private System.Collections.Generic.List<System.String> blacklist = new System.Collections.Generic.List<System.String> { 
+        private System.Collections.Generic.List<System.String> blacklist = new System.Collections.Generic.List<System.String> {
             "bone", "door", "cabernet", "chair", "couch", "drawer", "phone", "particle", "terrarium", "fire", "spot", "seat", "button", "sofa", "dryer", "washer", "pouf", "bed", "toilet", "compubrah", "climbtoroof", "audio"
         };
 
@@ -30,9 +31,9 @@ namespace ItemRandomizer
         public void InitializeGameObjects()
         { // __init__ objects when scene loads
             scene = SceneManager.GetActiveScene();
-            MelonLogger.Msg(string.Concat(Enumerable.Repeat("=", scene.name.Length)));
-            MelonLogger.Msg("Scene loaded: " + scene.name);
-            MelonLogger.Msg(string.Concat(Enumerable.Repeat("=", scene.name.Length)));
+            // MelonLogger.Msg(string.Concat(Enumerable.Repeat("=", scene.name.Length)));
+            // MelonLogger.Msg("Scene loaded: " + scene.name);
+            // MelonLogger.Msg(string.Concat(Enumerable.Repeat("=", scene.name.Length)));
 
             sceneInIntro = scene.name == "EekGamesIntro";
             sceneInDisclaimer = scene.name == "Disclaimer";
@@ -40,9 +41,45 @@ namespace ItemRandomizer
             sceneInLoading = scene.name == "LoadingScreen";
             sceneInGameMain = scene.name == "GameMain";
 
+            if (sceneInIntro)
+            {
+                MelonLogger.Msg("Initialized");
+            }
+
             if (sceneInGameMain)
             {
                 RandomizeLogic();
+            }
+        }
+
+        private static void PrintHierarchy()
+        {
+            MelonLogger.Msg("Print object hierarchy");
+            foreach (var obj in SceneManager.GetActiveScene().GetRootGameObjects())
+            {
+                MelonLogger.Msg("Root object");
+                PrintChildren(obj.transform, "");
+            }
+        }
+
+        private static void PrintChildren(Transform t, string indent)
+        {
+            int child_count = t.childCount;
+            MelonLogger.Msg($"{indent}'<{t.gameObject.GetType().ToString().Replace("UnityEngine.", "")}>{t.gameObject.name}' ({child_count} children) -> Layer [{t.gameObject.layer}] {LayerMask.LayerToName(t.gameObject.layer)}");
+
+            string more_indent;
+            if (indent.Length == 0)
+            {
+                more_indent = indent + "L___";
+            }
+            else
+            {
+                more_indent = indent + "____";
+            }
+            for (int i = 0; i < child_count; ++i)
+            {
+                var child = t.GetChild(i);
+                PrintChildren(child, more_indent);
             }
         }
 
@@ -67,7 +104,7 @@ namespace ItemRandomizer
             }
             else if (sceneInGameMain)
             {
-                InGame();
+                //InGame();
             }
         }
 
@@ -78,7 +115,29 @@ namespace ItemRandomizer
 
         private void InDisclaimer()
         {
-            //
+            foreach (var obj in SceneManager.GetActiveScene().GetRootGameObjects())
+            {
+                Text target = obj.gameObject.GetComponentInChildren<Text>();
+                if (target)
+                {
+                    target.text = Shuffle(target.text);
+                }
+            }
+        }
+        private string Shuffle(string str)
+        {
+            char[] array = str.ToCharArray();
+            System.Random rng = new System.Random();
+            int n = array.Length;
+            while (n > 1)
+            {
+                n--;
+                int k = rng.Next(n + 1);
+                var value = array[k];
+                array[k] = array[n];
+                array[n] = value;
+            }
+            return new string(array);
         }
 
         private void InMainMenu()
@@ -92,14 +151,14 @@ namespace ItemRandomizer
         }
 
         private void InGame()
-        {            
+        {
             if (Keyboard.current[Key.Numpad9].wasPressedThisFrame && Keyboard.current[Key.LeftAlt].isPressed && Keyboard.current[Key.LeftCtrl].isPressed)
             {
                 RandomizeLogic();
             }
         }
 
-        private List<GameObject> ExtractChildren(Transform obj) 
+        private List<GameObject> ExtractChildren(Transform obj)
         { // Method which extract children from parents
             List<GameObject> interactiveItems = new List<GameObject>();
 
@@ -131,12 +190,12 @@ namespace ItemRandomizer
 
             foreach (var obj in SceneManager.GetActiveScene().GetRootGameObjects())
             {
-                if (obj.gameObject.layer == 11 && LayerMask.LayerToName(obj.gameObject.layer).ToLower() == "interactiveitems") 
+                if (obj.gameObject.layer == 11 && LayerMask.LayerToName(obj.gameObject.layer).ToLower() == "interactiveitems")
                 {
                     interactiveItems.Add(obj.gameObject);
                 }
-                if (obj.transform.childCount > 0) 
-                { 
+                if (obj.transform.childCount > 0)
+                {
                     foreach (var moreObj in ExtractChildren(obj.transform))
                     {
                         interactiveItems.Add(moreObj);
@@ -166,7 +225,7 @@ namespace ItemRandomizer
                     isValid = false;
                 }
 
-                if (isValid) 
+                if (isValid)
                 {
                     validInteractiveItems.Add(obj);
                 }
