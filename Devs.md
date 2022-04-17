@@ -12,3 +12,5 @@ You can now hit the `Start` button in order to start the game with your compiled
 # Writing Mods
 
 See [MelonLoader Wiki](https://melonwiki.xyz/#/modders/quickstart) or refer to the mods inside this repository as an example.
+
+# More soon
