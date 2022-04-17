@@ -22,8 +22,8 @@ Mods which you would like to install should be copied into the `Steam\steamapps\
 
 # Mods
 
-## ItemRandomizer
+## [ItemRandomizer](ItemRandomizer/README.md)
 > Make the stories you play more challenging by randomizing spawn locations of items throughout the game. Every game is different with this mod.
 
-![alt text](ItemRandomizer/docs/assets/compare_1.png "Compare 1")
+![Master Compare](ItemRandomizer/docs/assets/compare_1.png "Compare 1")
 ![Fridge Compare](ItemRandomizer/docs/assets/compare_2.png "Compare 2")
