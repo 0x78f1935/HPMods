@@ -104,7 +104,7 @@ namespace ItemRandomizer
             }
             else if (sceneInGameMain)
             {
-                //InGame();
+                InGame();            
             }
         }
 

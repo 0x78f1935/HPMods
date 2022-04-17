@@ -38,6 +38,6 @@ using MelonLoader;
 
 //MelonLoader relies on assembly info to get your mod description. We will have to setup them up.
 //To do that, go to the Properties directory, and add these three lines to AssemblyInfo.cs
-[assembly: MelonInfo(typeof(ItemRandomizer.ItemRandomizer), "ItemRandomizer", "1.0.0", "undefined", "https://www.nexusmods.com/users/80656793?tab=user+files")]
+[assembly: MelonInfo(typeof(ItemRandomizer.ItemRandomizer), "ItemRandomizer", "1.0.1", "undefined", "https://github.com/0x78f1935/HPMods")]
 [assembly: MelonGame("Eek", "House Party")]
 [assembly: VerifyLoaderVersion(0, 5, 0, true)]
