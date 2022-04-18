@@ -7,7 +7,7 @@
 | 0        | Default                    | colliders get placed here                              |
 | 1        | TransparentFX              | --UNUSED--                                             |
 | 2        | Ignore Raycast             | optimizations?                                         |
-| 3        |                            | --UNUSED--                                             |
+| 3        |                            | used by all furniture                                  |
 | 4        | Water                      | --UNUSED--                                             |
 | 5        | UI                         | UI Elements                                            |
 | 6        |                            | --UNUSED--                                             |
