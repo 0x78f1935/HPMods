@@ -212,7 +212,7 @@ This repo contains numerous examples which can be used as inspiration for other 
 The modding scene is still very young and there are not that many examples out there yet.
 
 Some worthy sources to checkout:
-- [HPFreeCam](https://gh.rinderha.cc/HPFreecam)
+- [HPFreeCam](https://github.com/CamelCaseName/HPFreecam)
 - [HPInvader](https://github.com/CamelCaseName/HPInvader)
 - [HPcscPlus](https://github.com/CamelCaseName/HPcscPlus)
 - [HPspeed](https://github.com/CamelCaseName/HPspeed)
