@@ -27,3 +27,7 @@ Mods which you would like to install should be copied into the `Steam\steamapps\
 
 ![Master Compare](ItemRandomizer/docs/assets/compare_1.png "Compare 1")
 ![Fridge Compare](ItemRandomizer/docs/assets/compare_2.png "Compare 2")
+
+
+## [Freecam](HPFreecam/README.md)
+> Make the stories you play more challenging by randomizing spawn locations of items throughout the game. Every game is different with this mod.
