@@ -1,3 +1,4 @@
 [submodule "HPFreecam"]
 	path = HPFreecam
 	url = https://github.com/CamelCaseName/HPFreecam
+	branch = master

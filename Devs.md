@@ -93,6 +93,7 @@ Add the additional `Reference`'s to your project:
 - `MelonLoader\Managed\UnityEngine.InputSystem.dll`
 - `MelonLoader\Managed\UnhollowerBaseLib.dll`
     > If `MelonLoader\Managed\UnhollowerBaseLib.dll` is missing, use `Il2CppAssemblyUnhollower` instead downloaded earlier in this document.
+- `MelonLoader\Managed\Assembly-CSharp.dll`
 
 For a clean build you would like to select all the references in your project. \
 ![ReferenceSelection](.github/docs//assets/reference_selection.png "Reference Selection")
