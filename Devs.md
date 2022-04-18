@@ -70,6 +70,7 @@ We will call this version "the unsecure version" through out this document.
 There are a few sources with great additional information which are recommended to read through when stuck:
 
 - [MelonLoader Wiki](https://melonwiki.xyz/#/)
+- [List of Layers used by the game](./.github/docs/Layers.md)
 
 ---
 ---
