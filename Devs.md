@@ -212,8 +212,8 @@ This repo contains numerous examples which can be used as inspiration for other 
 The modding scene is still very young and there are not that many examples out there yet.
 
 Some worthy sources to checkout:
-- [HPFreeCam](https://github.com/CamelCaseName/HPFreecam)
-- [HPInvader](https://github.com/CamelCaseName/HPInvader)
-- [HPcscPlus](https://github.com/CamelCaseName/HPcscPlus)
-- [HPspeed](https://github.com/CamelCaseName/HPspeed)
-- [HPFuckAnzu](https://github.com/CamelCaseName/HPFuckAnzu)
+- [HPFreecam](https://github.com/CamelCaseName/HPFreecam) (enables a freecam mode.)
+- [HPInvader](https://github.com/CamelCaseName/HPInvader) (tries to add minigames to the game.)
+- [HPcscPlus](https://github.com/CamelCaseName/HPcscPlus) (tries to add a CSC in the game, with live editing.)
+- [HPspeed](https://github.com/CamelCaseName/HPspeed) (the base mod for the custom timer component for livesplit to know when something happened in the game.)
+- [HPFuckAnzu](https://github.com/CamelCaseName/HPFuckAnzu) (removes the anzu ads from the game, though they are now removed anyways.)
