@@ -71,6 +71,8 @@ There are a few sources with great additional information which are recommended 
 
 - [MelonLoader Wiki](https://melonwiki.xyz/#/)
 - [List of Layers used by the game](./.github/docs/Layers.md)
+- [Using custom classes in the mods](./.github/docs/CustomClasses.md)
+- [Even more documentation linked](./.github/docs/GoodReads.md)
 
 ---
 ---
